@@ -1,0 +1,91 @@
+.banner .swiper {
+    width: 240px;
+    height: 320px;
+}
+
+.banner .swiper-slide {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 18px;
+    font-size: 22px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.banner .text-gradient {
+    background: linear-gradient(
+        to right,
+        #0a0909,
+        #001aaa
+    ); /* Dégradé de couleur */
+    color: transparent; /* Rendre le texte transparent pour montrer le dégradé en arrière-plan */
+    background-clip: text; /* Appliquer le dégradé au texte */
+    -webkit-background-clip: text; /* Pour la compatibilité avec les navigateurs WebKit */
+    transform: translateX(0);
+    transition: transform 0.5s;
+    animation: swipeAnimation 2s linear infinite;
+}
+
+@keyframes swipeAnimation {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(0);
+    }
+    75% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Ajoutez ceci si vous voulez que l'animation s'arrête au survol */
+.text-gradient:hover {
+    animation: none;
+}
+
+.banner .swiper-slide:nth-child(1n) {
+    background-image: url('/src/assets/banner-books/book1.png');
+}
+
+.banner .swiper-slide:nth-child(2n) {
+    background-image: url('/src/assets/banner-books/book2.png');
+}
+
+.banner .swiper-slide:nth-child(3n) {
+    background-image: url('/src/assets/banner-books/book3.png');
+}
+
+.banner .swiper-slide:nth-child(4n) {
+    background-image: url('/src/assets/banner-books/book4.png');
+}
+
+.banner .swiper-slide:nth-child(5n) {
+    background-image: url('/src/assets/banner-books/book5.png');
+}
+
+.banner .swiper-slide:nth-child(6n) {
+    background-color: rgb(180, 10, 47);
+}
+
+.banner .swiper-slide:nth-child(7n) {
+    background-color: rgb(35, 99, 19);
+}
+
+.banner .swiper-slide:nth-child(8n) {
+    background-color: rgb(0, 68, 255);
+}
+
+.banner .swiper-slide:nth-child(9n) {
+    background-color: rgb(218, 12, 218);
+}
+
+.banner .swiper-slide:nth-child(10n) {
+    background-color: rgb(54, 94, 77);
+}
