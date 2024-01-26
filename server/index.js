@@ -1,7 +1,11 @@
 const express = require('express')
 const app = express()
-const port = process.env.PORT || 8080
+const dotenv = require('dotenv')
 const cors = require('cors')
+
+dotenv.config()
+
+const port = process.env.PORT || 8080
 
 // middleware
 app.use(cors())
@@ -19,8 +23,7 @@ const {
     ObjectId,
     MongoError,
 } = require('mongodb')
-const uri =
-    'mongodb+srv://tokyhernat:6GpoXAAG5kY5lqbc@tanaestate.kub8xwx.mongodb.net/?retryWrites=true&w=majority'
+const uri = process.env.MONGODB_URI
 
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
 const client = new MongoClient(uri, {
